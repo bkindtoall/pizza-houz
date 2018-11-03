@@ -26,22 +26,40 @@
 	</div>
 	<hr>
 	<form id=customOrder>
-		<fieldset>
-			<legend>Eat in, Take out, or Delivery?</legend>
-			<div>
-				<input type="checkbox" name="deliveryOr[]" value="eatIn">
-				<label for="eatIn">Forget about it! I'm Eating there!</label>
-			</div>
-			<div>
-				<input type="checkbox" name="deliveryOr[]" value="takeOut">
-				<label for="takeOut">I'll be right over (Take Out)!</label>
-			</div>
-			<div>
-				<input type="checkbox" name="deliveryOr[]" value="delivery">
-				<label for="delivery">HUNGRY! Bring it on over! (Delivery)</label>
-			</div>
-		</fieldset>
+          <div class="radio">
+            <label>
+              <input type="radio" name="deliveryOr" value="eatIn">Forget about it! I'm eatin there!
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="deliveryOr" value="takeOut">I'll be right over (Take Out)!
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="deliveryOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
+            </label>
+          </div>
+          <hr>
+          <div class="radio">
+            <label>
+              <input type="radio" name="meatOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="deliveryOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="deliveryOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
+            </label>
+          </div>
+          <hr>
 	</form>
 </body>
 
 </html>
+
