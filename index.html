@@ -8,34 +8,40 @@
 	<title>Pizza Houz</title>
 </head>
 <body>
-	<form id="name">
-		<fieldset>
-		<legend>Your Information</legend>
-		Name: <input type="text" id="first"><br>
-		Email: <input type="text" id="last"><br>
-		Cell: <input type="number" id="cell">
-		</fieldset>	
+	<div class="container">
+		<form id="name">
+			<fieldset>
+				<legend>Your Information</legend>
+				Name: <input type="text" id="first"><br>
+				Email: <input type="text" id="last"><br>
+				Cell: <input type="number" id="cell"><br><br>
+				<p>For delivery only:</p>
+				Street Address: <input type="text" id="street"><br>
+				City: <input type="text" id="city"><br>
+				State: <input type="text" id="state"><br>
+				Zip code: <input type="number" id="zip">
+			</fieldset>	
+			<!-- <button type="submit" class="btn btn-danger">Create Name</button> -->
+		</form>
 	</div>
-	<!-- <button type="submit" class="btn btn-danger">Create Name</button> -->
-</form>
-
-<form id=customOrder>
-<fieldset>
-<legend>Eat in, Take out, or Delivery?</legend>
-  <div>
-    <input type="checkbox" id="eatIn" name="interest[]" value="eatIn">
-    <label for="eatIn">Forget about it! I'm Eating in!</label>
-  </div>
-  <div>
-    <input type="checkbox" id="takeOut" name="interest[]" value="takeOut">
-    <label for="takeOut">I'll be right over (Take Out)!</label>
-  </div>
-    <div>
-    <input type="checkbox" id="delivery" name="interest[]" value="delivery">
-    <label for="delivery">Chillin with my homies and we've got the munchies (Delivery)</label>
-  </div>
-  </fieldset>
-</form>
+	<hr>
+	<form id=customOrder>
+		<fieldset>
+			<legend>Eat in, Take out, or Delivery?</legend>
+			<div>
+				<input type="checkbox" name="deliveryOr[]" value="eatIn">
+				<label for="eatIn">Forget about it! I'm Eating there!</label>
+			</div>
+			<div>
+				<input type="checkbox" name="deliveryOr[]" value="takeOut">
+				<label for="takeOut">I'll be right over (Take Out)!</label>
+			</div>
+			<div>
+				<input type="checkbox" name="deliveryOr[]" value="delivery">
+				<label for="delivery">HUNGRY! Bring it on over! (Delivery)</label>
+			</div>
+		</fieldset>
+	</form>
 </body>
 
 </html>

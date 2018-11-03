@@ -19,7 +19,11 @@ var feta = { name: "feta"};
 
 //User Interface Logic --
 $(document).ready(function() {
-
+// 	$("#myform input:checkbox").change(function() {
+//     $("#myform input:checkbox").attr("checked", false);
+//     $(this).attr("checked", true);
+// });
+	
 	$("form#customOrder").submit(function(event) {
 	event.preventDefault();
 	var firstNm = $("input#first").val();
