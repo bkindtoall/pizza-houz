@@ -26,38 +26,109 @@
 	</div>
 	<hr>
 	<form id=customOrder>
+		<h3>Where-Ya-Wanna-Eat-the-Goods!?</h3>
           <div class="radio">
             <label>
-              <input type="radio" name="deliveryOr" value="eatIn">Forget about it! I'm eatin there!
+              <input type="radio" name="deliveryOr" value="eatIn"> Forget about it! I'm eatin there!
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="deliveryOr" value="takeOut">I'll be right over (Take Out)!
+              <input type="radio" name="deliveryOr" value="takeOut"> I'll be right over (Take Out)!
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="deliveryOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
-            </label>
-          </div>
-          <hr>
-          <div class="radio">
-            <label>
-              <input type="radio" name="meatOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="deliveryOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="deliveryOr" value="deliver">HUNGRY! Bring it on over! (Delivery)
+              <input type="radio" name="deliveryOr" value="deliver"> HUNGRY! Bring it on over! (Delivery)
             </label>
           </div>
           <hr>
+
+          <div id=deliverForm>
+          <h3>How many people we feedin!?</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sizeOr" value="large"> Large: Usually feeds 4 people (16") - $16.99
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sizeOr" value="medium"> Medium: Usually feeds 3 people (14") - $13.99
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sizeOr" value="small"> Small: Usually feeds 2 people (12") - 10.99
+            </label>
+          </div>
+          <hr>
+          <h3>Let's talk sauce! Choose one.</h3>
+           <div class="radio">
+            <label>
+              <input type="radio" name="sauceOr" value="red"> Red - Good 'ol italian red sauce, like your mamma made!
+            </label>
+          	</div>
+          	 <div class="radio">
+            <label>
+              <input type="radio" name="sauceOr" value="white"> White - Alfredo loves it!
+            </label>
+          </div>
+            <div class="radio">
+            <label>
+              <input type="radio" name="sauceOr" value="bbq"> BBQ - A nod to the folks down south. Traditional and tangy. Finger lickin delish.
+            </label>
+          </div>
+          <hr>
+          <h4>For all toppings (except mozzarella cheese) add $1.50 each</h4>
+          <h3>Meat? We got lots! Make ya choices!</h3>          
+           <div class="checkbox">
+            <label>
+              <input type="checkbox" name="meatOr1" id="bacon" checkstate="false" value="bacon"> Bacon
+            </label>
+          	</div>
+          	 <div class="checkbox">
+            <label>
+              <input type="checkbox" name="meatOr2" id="sausage" checkstate="false" value="sausage"> Italian sausage (mild)
+            </label>
+          </div>
+            <div class="checkbox">
+            <label>
+              <input type="checkbox" name="meatOr3" id="canadianHam" checkstate="false" value="canadianHam"> Canadian Ham
+            </label>
+          </div>
+          <h3>Toppings! That'sa good! </h3>          
+           <div class="checkbox">
+            <label>
+              <input type="checkbox" name="veggie1" id="tomatoes" checkstate="false" value="tomatoes"> Tomatoes
+            </label>
+          	</div>
+          	 <div class="checkbox">
+            <label>
+              <input type="checkbox" name="veggie2" id="mushrooms" checkstate="false" value="mushrooms"> Mushrooms
+            </label>
+          </div>
+            <div class="checkbox">
+            <label>
+              <input type="checkbox" name="veggie3" id="spinach" checkstate="false" value="spinach"> Spinach
+            </label>
+          </div>
+          <h3>Cheese!! Mamma Mia!</h3>          
+           <div class="checkbox">
+            <label>
+              <input type="checkbox" name="cheese1" id="mozzarella" checkstate="true" checked="checked" value="mozzarella"> Mozzarella
+            </label>
+          	</div>
+          	 <div class="checkbox">
+            <label>
+              <input type="checkbox" name="cheese2" id="feta" checkstate="false" value="feta"> Feta
+            </label>
+          </div>
+            <div class="checkbox">
+            <label>
+              <input type="checkbox" name="cheese3" id="parmesan" checkstate="false" value="parmesan"> Parmesan
+            </label>
+          </div>
+          </div>
 	</form>
 </body>
 
