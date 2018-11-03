@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3-3-1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title>Pizza Houz</title>
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3-3-1.js"></script>
+	<script src="js/scripts.js"></script>
+	<title>Pizza Houz</title>
 </head>
 <body>
-<form id=customOrder>
+	<form id="name">
+		<fieldset>
+		<legend>Your Information</legend>
+		Name: <input type="text" id="first"><br>
+		Email: <input type="text" id="last"><br>
+		Cell: <input type="number" id="cell">
+		</fieldset>	
+	</div>
+	<!-- <button type="submit" class="btn btn-danger">Create Name</button> -->
+</form>
 
+<form id=customOrder>
+<fieldset>
+<legend>Eat in, Take out, or Delivery?</legend>
   <div>
-    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
-    <label for="subscribeNews">Subscribe to newsletter?</label>
+    <input type="checkbox" id="eatIn" name="interest[]" value="eatIn">
+    <label for="eatIn">Forget about it! I'm Eating in!</label>
   </div>
   <div>
-    <button type="submit">Subscribe</button>
+    <input type="checkbox" id="takeOut" name="interest[]" value="takeOut">
+    <label for="takeOut">I'll be right over (Take Out)!</label>
   </div>
+    <div>
+    <input type="checkbox" id="delivery" name="interest[]" value="delivery">
+    <label for="delivery">Chillin with my homies and we've got the munchies (Delivery)</label>
+  </div>
+  </fieldset>
 </form>
 </body>
 

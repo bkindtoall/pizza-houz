@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 	$("form#customOrder").submit(function(event) {
 	event.preventDefault();
-	var firstNm = $("input#First").val();
-	var lastNm = $("input#Last").val();
+	var firstNm = $("input#first").val();
+	var lastNm = $("input#last").val();
   	});
 });
