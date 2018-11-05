@@ -33,86 +33,55 @@ function myPizza() {
 // var pizza;
 
 //pizza constructor
-function Pizza(size, meat, veggie, sauce, cheese) { 
-	this.size = size;
+function Pizza(sizeStatus, meat, veggie, sauceStatus, cheese) { 
+	this.sizeStatus = sizeStatus;
 	this.meat = meat;
 	this.veggie = veggie;
-	this.sauce =sauce;
+	this.sauceStatus =sauceStatus;
 	this.cheese = cheese;
 }
 
-//from user interface
-	var deliveryChk = document.getElementsByName('deliveryOr');	
-	var deliveryStatus;
-	
-	for(var i=0; i < deliveryChk.length; i++) {
-        if(deliveryChk[i].checked){
-            deliveryStatus = deliveryChk[i].value;
-        }
-	}        
-	var sizeChk = document.getElementsByName('sizeOr');	
-	var sizeStatus;
-	
-	for(var i=0; i < sizeChk.length; i++) {
-        if(sizeChk[i].checked){
-            sizeStatus = sizeChk[i].value;
-        }
-	}  
-	var sauceChk = document.getElementsByName('sauceOr');	
-	var sauceStatus;
-	
-	for(var i=0; i < sauceChk.length; i++) {
-        if(sauceChk[i].checked){
-            sauceStatus = sauceChk[i].value;
-        }
-	}        	      
-	var deliveryChk = document.getElementsByName('deliveryOr');	
-	var deliveryStatus;
-	
-	for(var i=0; i < deliveryChk.length; i++) {
-        if(deliveryChk[i].checked){
-            deliveryStatus = deliveryChk[i].value;
-        }
-	}        
-	// var meatChk = document.getElementsById('bacon');	
-	// var meatStatus;
-	
-	// for(var i=0; i < meatChk.length; i++) {
- //        if(meatChk#bacon.checked){
- //            meatStatus = meatChk[i].value;
- //        }
-	// }        	
 
 $(document).ready(function() {
 	$("form#name").submit(function(event) {
-	event.preventDefault();
-	var firstNm = $("input#first").val();
-	var lastNm = $("input#last").val();
-	var cellNm = $("input#cell").val();
+		event.preventDefault();
+		var firstNm = $("input#first").val();
+		var lastNm = $("input#last").val();
+		var cellNm = $("input#cell").val();
 	});
 	$('#submitOrder').click(function() {
-		var boxesChecked=[];
-		$('input[name="selection"]:checked').each(function() {
-			boxesChecked.push(this.value);
-			return boxesChecked;
+		var deliveryChk=[];
+		$('input[name="deliveryOr"]:checked').each(function() {
+			deliveryChk.push(this.value);
+			console.log(deliveryChk)
 		});
-		alert (boxesChecked)
+			if (deliveryChk === "deliver") {
+			 	alert("delivery")
+			} else if (deliveryChk === "takeOut") {
+			 	alert("takeOut")
+			} else
+			 	alert("eatin")
 	});
-	// 	$('#submitOrder').click(function() {
-	// 	var boxesChecked = new Array();
-	// 	$('input[name="veggie"]:checked').each(function() {
-	// 		boxesChecked.push(this.value);
-	// 		return boxesChecked
-	// 	});
-	// 	alert (boxesChecked)
-	// });
-	// 			$('#submitOrder').click(function() {
-	// 	var boxesChecked = new Array();
-	// 	$('input[name="cheese"]:checked').each(function() {
-	// 		boxesChecked.push(this.value);
-	// 		return boxesChecked
-	// 	});
-	// 	alert (boxesChecked)
-	// });
+	$('#submitOrder').click(function() {
+		var sizeChk=[];
+		$('input[name="sizeOr"]:checked').each(function() {
+			sizeChk.push(this.value);
+			console.log(sizeChk)
+		});
+	});
+	$('#submitOrder').click(function() {
+		var sauceChk=[];
+		$('input[name="sauceOr"]:checked').each(function() {
+			sauceChk.push(this.value);
+			console.log(sauceChk)
+		});
+	});				
+	$('#submitOrder').click(function() {
+		var toppingsChk=[];
+		$('input[name="selection"]:checked').each(function() {
+			toppingsChk.push(this.value);
+			console.log(toppingsChk)
+		});
+	});
 });
 
