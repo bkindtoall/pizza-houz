@@ -55,9 +55,9 @@ $(document).ready(function() {
 			deliveryChk.push(this.value);
 			console.log(deliveryChk)
 		});
-			if (deliveryChk === "deliver") {
-			 	alert("delivery")
-			} else if (deliveryChk === "takeOut") {
+			if (deliveryChk == "deliver") {
+			 	alert("deliver")
+			} else if (deliveryChk == "takeOut") {
 			 	alert("takeOut")
 			} else
 			 	alert("eatin")
