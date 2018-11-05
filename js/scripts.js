@@ -74,12 +74,45 @@ function Pizza(size, meat, veggie, sauce, cheese) {
             deliveryStatus = deliveryChk[i].value;
         }
 	}        
+	// var meatChk = document.getElementsById('bacon');	
+	// var meatStatus;
+	
+	// for(var i=0; i < meatChk.length; i++) {
+ //        if(meatChk#bacon.checked){
+ //            meatStatus = meatChk[i].value;
+ //        }
+	// }        	
 
 $(document).ready(function() {
-	$("form#customOrder").submit(function(event) {
+	$("form#name").submit(function(event) {
 	event.preventDefault();
 	var firstNm = $("input#first").val();
 	var lastNm = $("input#last").val();
-  	});
-  	
+	var cellNm = $("input#cell").val();
+	});
+	$('#submitOrder').click(function() {
+		var boxesChecked=[];
+		$('input[name="selection"]:checked').each(function() {
+			boxesChecked.push(this.value);
+			return boxesChecked;
+		});
+		alert (boxesChecked)
+	});
+	// 	$('#submitOrder').click(function() {
+	// 	var boxesChecked = new Array();
+	// 	$('input[name="veggie"]:checked').each(function() {
+	// 		boxesChecked.push(this.value);
+	// 		return boxesChecked
+	// 	});
+	// 	alert (boxesChecked)
+	// });
+	// 			$('#submitOrder').click(function() {
+	// 	var boxesChecked = new Array();
+	// 	$('input[name="cheese"]:checked').each(function() {
+	// 		boxesChecked.push(this.value);
+	// 		return boxesChecked
+	// 	});
+	// 	alert (boxesChecked)
+	// });
 });
+
