@@ -5,3 +5,6 @@ h4 {
 h3 {
 	text-decoration: underline;
 }
+#deliverForm {
+	display: none;
+}

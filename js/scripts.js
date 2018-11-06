@@ -49,18 +49,19 @@ $(document).ready(function() {
 		var lastNm = $("input#last").val();
 		var cellNm = $("input#cell").val();
 	});
-	$('#submitOrder').click(function() {
+	$('#submitDelivery').click(function() {
 		var deliveryChk=[];
 		$('input[name="deliveryOr"]:checked').each(function() {
 			deliveryChk.push(this.value);
 			console.log(deliveryChk)
 		});
-			if (deliveryChk == "deliver") {
-			 	alert("deliver")
-			} else if (deliveryChk == "takeOut") {
-			 	alert("takeOut")
-			} else
-			 	alert("eatin")
+			if (deliveryChk == "deliver" || "takeOut") {
+			$("#deliverForm").show("slow");
+			$("#submitDelivery").hide();
+			// } else if (deliveryChk == "takeOut") {
+			//  	alert("takeOut")
+			} else if (deliveryChk == "eatIn")
+			$("a.pdfMenu").attr("href", "http://www.google.com/")
 	});
 	$('#submitOrder').click(function() {
 		var sizeChk=[];
