@@ -41,7 +41,6 @@
 			<label>
 				<input type="radio" name="deliveryOr" value="eatIn"> Forget about it! I'm eatin there!
 			</label>
-			<a class="pdfMenu"></a>
 		</div>
 		<div class="radio">
 			<label>
@@ -50,11 +49,34 @@
 		</div>
 		<div class="radio">
 			<label>
-				<input type="radio" name="deliveryOr" value="deliver"> HUNGRY! Bring it on over! (Delivery)
+				<input type="radio" id="delivery" name="deliveryOr" value="deliver"> HUNGRY! Bring it on over! (Delivery)
 			</label>
 		</div>
+				<div id="contact">
+			<table>
+				<hr>
+				<p>Our location:</p>
+				<tr align="justify">
+			    	<th>Location:</th>
+			    	<td> 600 1st Ave</td>
+			    	<td> Seattle, WA 98106</td>
+			 	</tr>
+			  	<tr align="justify">
+			    	<th>Telephone:</th>
+			    	<td> 206-123-4567</td>
+			  	</tr>
+			  	<tr align="justify">
+			  		<th>Hours:</th>
+			  		<td> Mon-Thur 11am-9pm</td>
+			  		<td> Fri-Sat 11am-11pm</td>
+			  		<td> Closed Sunday</td>
+			  	</tr>		
+			</table><br>
+			  	<p><strong>See you for pizza!</strong></p>		
 		<hr>
-		<input type="button" id="submitDelivery" name="submitDelivery" value="submit" />
+		</div>
+		<br>
+				<input type="button" id="submitDelivery" name="submitDelivery" value="submit" />
 		<div id=deliverForm>
 			<h3>How many people we feedin!?</h3>
 			<div class="radio">
@@ -142,6 +164,7 @@
 			<input type="button" id="submitOrder" name="submitOrder" value="submit" />
 			<div id="boxeschecked"></div>
 		</div>
+
 	</form>
 </body>
 

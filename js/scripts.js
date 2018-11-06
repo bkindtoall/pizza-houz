@@ -41,6 +41,7 @@ function Pizza(sizeStatus, meat, veggie, sauceStatus, cheese) {
 	this.cheese = cheese;
 }
 
+//user interface
 
 $(document).ready(function() {
 	$("form#name").submit(function(event) {
@@ -53,35 +54,40 @@ $(document).ready(function() {
 		var deliveryChk=[];
 		$('input[name="deliveryOr"]:checked').each(function() {
 			deliveryChk.push(this.value);
-			console.log(deliveryChk)
+	
 		});
-			if (deliveryChk == "deliver" || "takeOut") {
+			if (deliveryChk == "deliver") {
 			$("#deliverForm").show("slow");
 			$("#submitDelivery").hide();
-			// } else if (deliveryChk == "takeOut") {
-			//  	alert("takeOut")
-			} else if (deliveryChk == "eatIn")
-			$("a.pdfMenu").attr("href", "http://www.google.com/")
+			$("#contact").hide();
+			} else if (deliveryChk == "takeOut") {
+			$("#deliverForm").show("slow");
+			$("#submitDelivery").hide();
+			} else if (deliveryChk == "eatIn") {
+			$("#contact").show("slow");
+			$("#deliverForm").hide();
+			$("#submitDelivery").hide();
+			}
 	});
 	$('#submitOrder').click(function() {
 		var sizeChk=[];
 		$('input[name="sizeOr"]:checked').each(function() {
 			sizeChk.push(this.value);
-			console.log(sizeChk)
+			// console.log(sizeChk)
 		});
 	});
 	$('#submitOrder').click(function() {
 		var sauceChk=[];
 		$('input[name="sauceOr"]:checked').each(function() {
 			sauceChk.push(this.value);
-			console.log(sauceChk)
+			// console.log(sauceChk)
 		});
 	});				
 	$('#submitOrder').click(function() {
 		var toppingsChk=[];
 		$('input[name="selection"]:checked').each(function() {
 			toppingsChk.push(this.value);
-			console.log(toppingsChk)
+			// console.log(toppingsChk)
 		});
 	});
 });
