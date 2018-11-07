@@ -1,52 +1,30 @@
-// //objects being fed through constructor myOrder
-// var largeSz = { name: "largeSz", price: 16.99};
-// var mediumSz = { name: "mediumSz", price: 13.99};
-// var smallSz = { name: "smallSz", price: 10.99};
+//back end
 
-// var bacon = { name: "bacon", price: 1.50};
-// var sausage = { name: "sausage", price: 1.50};
-// var canadianHam = { name: "canadianHam", price: 1.50};
-
-// var tomatoes = { name: "tomatoes", price: 1.50};
-// var mushrooms = { name: "mushrooms", price: 1.50};
-// var spinach = { name: "spinach", price: 1.50};
-
-// var bbq = { name: "bbq"};
-// var red = { name: "red"};
-// var white = { name: "white", price: 1.50};
-
-// var mozzarella = { name: "mozzarella"};
-// var feta = { name: "feta", price: 1.50};
-// var parmesan = { name: "parmesan", price: 1.50};
-
-
-function CreatePizza(size, toppings, sauce) { 
+function CreatePizza (sizeChk, toppingsChk, sauceChk) { 
 	this.sizeChk = size;
 	this.toppingsChk = toppings;
 	this.sauceChk = sauce;
 	this.price = 0;
 };
 
-CreatePizza.prototype.price = function (){
+CreatePizza.prototype.amountDue = function (){
   if(this.sizeChk == "large"){
     this.price += 16.99;
+    console.log(price)
   } else if (this.sizeChk == "medium"){
     this.price += 13.99;
   } else if (this.sizeChk == "small") {
   this.price += 10.99;
-}; 
-// else {
-  // alert("Please Pick a Pizza Size!")
-  // document.return()
-// }
-  this.price += this.toppings;
-  return this.price
+  } else {
+  return "error";
+}
+  this.amountDue += (this.toppings * 1.50);
+  return this.amountDue;
+  // console.log(amountDue);
 };
 
-
-// CreatePizza.prototype.fullOrder() {
-// 	return "Your order: Size " + this.size 
-// }
+// var newOrder = new CreatePizza (sizeChk, toppingsChk, sauceChk);
+// var priceTot = newOrder.amountDue();
 
 function Contact(firstNm, lastNm, cellNm) {
 	this.firstNm = firstName,
@@ -99,7 +77,7 @@ $(document).ready(function() {
 		var sizeChk=[];
 		$('input[name="sizeOr"]:checked').each(function() {
 			sizeChk.push(this.value);
-			// console.log(sizeChk)
+			console.log(sizeChk)
 		});
 	});
 	$('#submitOrder').click(function() {
@@ -113,7 +91,7 @@ $(document).ready(function() {
 		var toppingsChk=[];
 		$('input[name="selection"]:checked').each(function() {
 			toppingsChk.push(this.value);
-			// console.log(toppingsChk)
+			console.log(toppingsChk)
 		});
 	});
 });
