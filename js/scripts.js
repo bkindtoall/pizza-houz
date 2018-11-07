@@ -10,18 +10,17 @@ function CreatePizza (sizeChk, toppingsChk, price) {
 
 CreatePizza.prototype.amountDue = function (){
 	if(this.sizeChk == "large"){
-		this.price += 16.99;
-		console.log(price)
+		this.price += 16;
 	} else if (this.sizeChk == "medium"){
-		this.price += 13.99;
+		this.price += 13;
 	} else if (this.sizeChk == "small") {
-		this.price += 10.99;
+		this.price += 10;
 	} else {
 		return "error";
 	}
-	this.amountDue += (this.toppingsChk * 1.50);
-	return this.amountDue;
-	console.log(amountDue);
+	this.price += (this.toppingsChk * 2);
+		return this.price;
+		console.log(amountDue);
 };
 
 
@@ -79,15 +78,15 @@ $(document).ready(function() {
 		// var sauceChk=[];
 		$('input[name="sizeOr"]:checked').each(function() {
 			sizeChk=this.value;
-		console.log(sizeChk);
+		// console.log(sizeChk);
 		});
 		$('input[name="selection"]:checked').each(function() {
 			toppingsChk.push(this.value);
-		console.log(toppingsChk)
+		// console.log(toppingsChk)
 		});
 
 	var newOrder = new CreatePizza (sizeChk, toppingsChk);
 	var priceTot = newOrder.amountDue();
-	console.log(newOrder);
+	$("#boxesChecked").text("Amount due on this order: $" + priceTot);
 	});
 });
