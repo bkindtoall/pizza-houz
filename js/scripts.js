@@ -27,7 +27,7 @@ function CreatePizza(size, toppings, sauce) {
 	this.price = 0;
 };
 
-Order.prototype.price = function (){
+CreatePizza.prototype.price = function (){
   if(this.sizeChk == "large"){
     this.price += 16.99;
   } else if (this.sizeChk == "medium"){
@@ -87,6 +87,7 @@ $(document).ready(function() {
 			$("#contact").hide();
 			} else if (deliveryChk == "takeOut") {
 			$("#deliverForm").show("slow");
+			$("#contact").show();
 			$("#submitDelivery").hide();
 			} else if (deliveryChk == "eatIn") {
 			$("#contact").show("slow");
