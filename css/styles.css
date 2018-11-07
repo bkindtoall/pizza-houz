@@ -1,5 +1,5 @@
 h4 {
-	color: #fc7e55;
+	color: black;
 }
 
 h3 {
@@ -13,4 +13,16 @@ h3 {
 }
 table, th, td {
     border: 1px solid black;
+}
+html {
+	background-color: #bf5530;
+	color: white;
+}
+.container-fluid {
+	background-color: #bf5530;
+	color: white;
+}
+#customOrder {
+	background-color: #bf5530;
+	color: white;	
 }

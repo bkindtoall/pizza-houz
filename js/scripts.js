@@ -1,6 +1,6 @@
 //back end
 
-function CreatePizza (sizeChk, toppingsChk, sauceChk) { 
+function CreatePizza (size, toppings, sauce) { 
 	this.sizeChk = size;
 	this.toppingsChk = toppings;
 	this.sauceChk = sauce;
@@ -20,16 +20,13 @@ CreatePizza.prototype.amountDue = function (){
 }
   this.amountDue += (this.toppings * 1.50);
   return this.amountDue;
-  // console.log(amountDue);
 };
 
-// var newOrder = new CreatePizza (sizeChk, toppingsChk, sauceChk);
-// var priceTot = newOrder.amountDue();
 
 function Contact(firstNm, lastNm, cellNm) {
 	this.firstNm = firstName,
 	this.lastNm = lastName,
-	this.cellNm = CellNum
+	this.cellNm = cellNum
 };
 
 Contact.prototype.fullName = function() {
@@ -55,6 +52,9 @@ $(document).ready(function() {
 	});
 	$('#submitDelivery').click(function() {
 		var deliveryChk=[];
+		var sizeChk=[];
+		var sauceChk=[];
+		var toppingsChk=[];
 		$('input[name="deliveryOr"]:checked').each(function() {
 			deliveryChk.push(this.value);
 	
@@ -72,27 +72,27 @@ $(document).ready(function() {
 			$("#deliverForm").hide();
 			$("#submitDelivery").hide();
 			}
-	});
+
 	$('#submitOrder').click(function() {
-		var sizeChk=[];
 		$('input[name="sizeOr"]:checked').each(function() {
 			sizeChk.push(this.value);
-			console.log(sizeChk)
+			// console.log(sizeChk);
 		});
 	});
 	$('#submitOrder').click(function() {
-		var sauceChk=[];
 		$('input[name="sauceOr"]:checked').each(function() {
 			sauceChk.push(this.value);
-			// console.log(sauceChk)
 		});
 	});				
 	$('#submitOrder').click(function() {
-		var toppingsChk=[];
 		$('input[name="selection"]:checked').each(function() {
 			toppingsChk.push(this.value);
-			console.log(toppingsChk)
+			// console.log(toppingsChk)
 		});
+	});
+
+var newOrder = new CreatePizza (sizeChk, toppingsChk, sauceChk);
+priceTot = newOrder.amountDue();
 	});
 });
 
