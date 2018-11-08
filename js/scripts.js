@@ -23,35 +23,12 @@ CreatePizza.prototype.amountDue = function (){
 		console.log(amountDue);
 };
 
-
-// function Contact(firstNm, lastNm, cellNm) {
-// 	this.firstNm = firstName,
-// 	this.lastNm = lastName,
-// 	this.cellNm = cellNum
-// };
-
-// Contact.prototype.fullName = function() {
-// 	return this.firstName + " " + this.lastName;
-// };
-
-// //user interface
-
 $(document).ready(function() {
-	$("form#name").submit(function(event) {
-		event.preventDefault();
-		// var firstNm = $("input#first").val();
-		// var lastNm = $("input#last").val();
-		// var cellNm = $("input#cell").val();
-		// // var newContact = new Contact(firstNm, lastNm, cellNm);
-		// var	street = $("input#street").val();
-		// var city = $("input#city").val();
-		// var state = $("input#state").val();
-		// var zip = $("input#zip").val();
-		// var newAddress = new Address(street, city, state, zip);
-		// displayContactDetails(customerInfo);
-		// displayAddressDetails(deliveryInfo);
-	});
+	
 	$('#submitDelivery').click(function() {
+		$("form#name").submit(function(event) {
+			event.preventDefault();
+		});
 		var deliveryChk=[];
 
 		$('input[name="deliveryOr"]:checked').each(function() {

@@ -1,5 +1,8 @@
 h4 {
 	color: black;
+	text-align: center;
+    border: 3px solid green;
+    background-color: white;
 }
 
 h3 {
@@ -17,13 +20,24 @@ table, th, td {
 html {
 	background-color: #bf5530;
 	color: white;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-image: url(../img/red.jpg);
 }
 .container-fluid {
 	background-color: #bf5530;
 	color: white;
+	background-image: url(../img/red.jpg);
+	padding-bottom: 10px;
 }
 #customOrder {
 	background-color: #bf5530;
 	color: white;	
+	background-image: url(../img/redcopy.jpg);	
+	border-style: groove;
+	border-width: 1px;
+	border-color: white;
+	margin-top: -35px;
+	padding-left: 20px;
+	padding-bottom: 20px;
 }
-
